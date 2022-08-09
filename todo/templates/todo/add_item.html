@@ -10,6 +10,7 @@
 
     <h1>Add a to do item:</h1>
     <form method="POST" action="add">
+        {% csrf_token %} <!--Adiciona este código para segurança do banco de dados]-->
         <div>
             <p>
                 <label for="id_name">Name: </label>
@@ -24,11 +25,10 @@
         </div>
         <div>
             <p>
-                <buttom type="submit">Add Item</buttom>
+                <button type="submit">Add Item</button>
             </p>
         </div>
     </form>
-
     
 </body>
 </html>
